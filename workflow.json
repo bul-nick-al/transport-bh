@@ -1,0 +1,60 @@
+{
+    "flow": {
+        "radioFlow": {
+            "init": "radioForm1",
+            "title": "Радио1",
+            "state": {
+                "radioForm1": {
+                    "events": {
+                        "next": {
+                            "newstate": "radioForm2",
+                            "title": "Радио1"
+                        }
+                    }
+                },
+                "radioForm2": {
+                    "events": {
+                        "back": {
+                            "newstate": "radioForm1",
+                            "title": "Радио2"
+                        }
+                    }
+                }
+            }
+        },
+        "transportFlow": {
+            "init": "transportForm1",
+            "title": "Выбор вместимости",
+            "state": {
+                "transportForm1": {
+                    "events": {
+                        "next": {
+                            "newstate": "transportForm2",
+                            "title": "Выбор маршрута"
+                        }
+                    }
+                },
+                "transportForm2": {
+                    "events": {
+                        "back": {
+                            "newstate": "transportForm1",
+                            "title": "Выбор вместимости"
+                        },
+                        "next": {
+                            "newstate": "transportForm3",
+                            "title": "Выбор нанесения"
+                        }
+                    }
+                },
+                "transportForm3": {
+                    "events": {
+                        "back": {
+                            "newstate": "transportForm2",
+                            "title": "Выбор маршрута"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
