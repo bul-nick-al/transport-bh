@@ -23,11 +23,23 @@
             }
         },
         "transportFlow": {
-            "init": "transportForm1",
-            "title": "Выбор вместимости",
+            "init": "landing",
+            "title": "Реклама в лифтах",
             "state": {
+                "landing": {
+                    "events": {
+                        "next": {
+                            "newstate": "transportForm1",
+                            "title": "Выбор маршрута"
+                        }
+                    }
+                },
                 "transportForm1": {
                     "events": {
+                        "back": {
+                            "newstate": "landing",
+                            "title": "Реклама в лифтах"
+                        },
                         "next": {
                             "newstate": "transportForm2",
                             "title": "Выбор маршрута"
